@@ -1,0 +1,38 @@
+# Python bytecode & caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local environment configuration & secrets
+.env
+.venv
+env/
+venv/
+ENV/
+local_settings.py
+
+# SQLite database (if used locally)
+*.sqlite3
+db.sqlite3
+
+# Media and static assets (User uploads and gathered assets)
+media/
+staticfiles/
+
+# Logs
+*.log
+pip-log.txt
+
+# Testing & Coverage reports
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDEs and Editors
+.vscode/
+
