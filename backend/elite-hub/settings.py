@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 import os
 from pathlib import Path
 import dj_database_url
+from dotenv import load_dotenv
 
 
 
@@ -29,12 +30,17 @@ SECRET_KEY = 'django-insecure-7r3-5r)g8@ze+04lu^1%$xs1)a2_3lc!19i(g)=3c6pt)$41rp
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['elite-hub-landing.onrender.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['elite-hub-landing.onrender.com', '127.0.0.1']
 
+cors_env = os.environ.get("CORS_ALLOWED_ORIGINS", "http://localhost:3000")
+CORS_ALLOWED_ORIGINS = [origin.strip() for origin in cors_env.split(",") if origin.strip()]
 
 # Application definition
 
 INSTALLED_APPS = [
+    'rest_framework',
+    'api',
+    'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,6 +50,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
