@@ -15,7 +15,7 @@ export const getSocialLinks = async () => {
 };
 
 export const getProjects = async () => {
-  const res = await fetch(`${baseUrl}/api/projects`, , {
+  const res = await fetch(`${baseUrl}/api/projects`, {
     cache: "no-store"
   });
   if (!res.ok) {
