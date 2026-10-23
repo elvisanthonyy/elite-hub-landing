@@ -5,7 +5,7 @@ import { useState } from "react";
 const Nav = () => {
   const [mode, setMode] = useState("light");
   return (
-    <nav className="bg-white flex items-center justify-between px-4 h-[64px] w-full">
+    <nav className="bg-white border-b border-[#d8d8d8] flex items-center justify-between px-4 h-[64px] w-full">
       <Icon iconUrl="/icons/light-logo.svg" size={24} label="light icon" />
 
       {/* Button to toggle theme*/}
