@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-7r3-5r)g8@ze+04lu^1%$xs1)a2_3lc!19i(g)=3c6pt)$41rp
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['elite-hub-landing.onrender.com', '127.0.0.1']
+ALLOWED_HOSTS = ['elite-hub-landing.onrender.com', '127.0.0.1', 'localhost']
 
 cors_env = os.environ.get("CORS_ALLOWED_ORIGINS", "http://localhost:3000")
 CORS_ALLOWED_ORIGINS = [origin.strip() for origin in cors_env.split(",") if origin.strip()]
@@ -87,6 +87,7 @@ WSGI_APPLICATION = 'elite-hub.wsgi.application'
 
 
 import os
+load_dotenv(BASE_DIR / ".env")
 
 if os.getenv("RENDER"):
     DATABASES = {
