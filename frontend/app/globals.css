@@ -15,6 +15,7 @@
   --color-accent: #f2f4d6;
   --color-text: #373737;
   --color-body-text: #626262;
+  --font-caacupe: var(--font-caacupe-one), sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {

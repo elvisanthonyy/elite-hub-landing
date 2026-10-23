@@ -12,6 +12,7 @@ import Show from "@/components/Show";
 export default async function Home() {
   const socialLinks: SocialLink[] = await getSocialLinks();
   const projects: Project[] = await getProjects();
+  console.log("Social Links:", socialLinks);
 
   return (
     <div className="flex flex-col flex-1">

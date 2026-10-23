@@ -3,10 +3,14 @@
 const baseUrl = process.env.API_URL;
 
 export const getSocialLinks = async () => {
-  const res = await fetch(`${baseUrl}/api/sociallinks`);
+  const res = await fetch(`${baseUrl}/api/sociallinks`, {
+    cache: "no-store"
+  });
 
   if (!res.ok) {
-    throw new Error(`API request failed: ${res.status} ${res.statusText}`);
+    throw new Error(`API request failed: ${res.status} ${res.statusText}`, {
+    cache: "no-store"
+  });
   }
   const data = await res.json();
   return data;

@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { Freckle_Face } from "next/font/google";
+import localFont from 'next/font/local';
 import "./globals.css";
 
 const roboto = Roboto({
   variable: "--font-roboto",
   subsets: ["latin"],
+});
+
+const caacupeOne = localFont({
+  src: '../public/fonts/CaacupeOne-Regular.ttf',
+  variable: '--font-caacupe-one',
 });
 
 export const metadata: Metadata = {
@@ -15,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${roboto.variable} h-full antialiased`}>
+    <html lang="en" className={`${roboto.variable} ${caacupeOne.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
