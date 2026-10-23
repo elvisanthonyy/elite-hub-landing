@@ -8,16 +8,16 @@ export const getSocialLinks = async () => {
   });
 
   if (!res.ok) {
-    throw new Error(`API request failed: ${res.status} ${res.statusText}`, {
-    cache: "no-store"
-  });
+    throw new Error(`API request failed: ${res.status} ${res.statusText}`);
   }
   const data = await res.json();
   return data;
 };
 
 export const getProjects = async () => {
-  const res = await fetch(`${baseUrl}/api/projects`);
+  const res = await fetch(`${baseUrl}/api/projects`, , {
+    cache: "no-store"
+  });
   if (!res.ok) {
     throw new Error(`API request failed: ${res.status} ${res.statusText}`);
   }
