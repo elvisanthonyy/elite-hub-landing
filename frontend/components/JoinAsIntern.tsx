@@ -2,7 +2,7 @@ import React from "react";
 
 const JoinAsIntern = () => {
   return (
-    <section className="px-4 flex flex-col gap-5 py-[24px]">
+    <section className="px-4 flex flex-col gap-5 py-[16px]">
       <h1 className="text-[20px] tracking-[-4%] font-semibold">
         JOIN AS INTERN?
       </h1>

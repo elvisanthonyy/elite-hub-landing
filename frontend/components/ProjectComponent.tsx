@@ -9,8 +9,8 @@ interface ChildProps {
 
 const ProjectComponent = ({ project }: ChildProps) => {
   return (
-    <div className="w-full flex flex-col gap-3 p-2 border rounded-[24px] min-h-[100px] border-[#d8d8d8]">
-      <div className="w-full overflow-hidden h-[180px] bg-[#eefdf7] rounded-[16px]">
+    <div className="w-full flex flex-col gap-3 p-2 border rounded-[16px] min-h-[100px] border-[#d8d8d8]">
+      <div className="w-full overflow-hidden h-[180px] bg-[#eefdf7] rounded-[8px]">
         <Image
           src={"/images/hero-image.png"}
           height={2000}

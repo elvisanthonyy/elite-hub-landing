@@ -39,7 +39,7 @@ const OurWork = ({ projects }: ChildProps) => {
     }
   }, [seeMore]);
   return (
-    <section className="px-4 flex  flex-col gap-5 py-[24px]">
+    <section className="px-4 flex  flex-col gap-5 py-[16px]">
       <div className="flex  flex-col">
         <h1 className="text-[20px] tracking-[-4%] font-semibold">OUR WORK</h1>
         <p className="text-[14px] w-[90%] text-body-text leading-[18.2px]">
@@ -53,12 +53,11 @@ const OurWork = ({ projects }: ChildProps) => {
           <ProjectComponent key={project.id.toString()} project={project} />
         ))}
       </div>
-      <div className="w-full flex justify-end">
+      <div className="w-full flex justify-center">
         <button
           className="text-[14px] cursor-pointer items-center flex gap-2 tracking-[-4%] font-medium text-body-text"
           onClick={setSeeMoreVariable}
         >
-          {seeMore ? "See less" : "See more"}
           <div
             className={`transition-all ease-in duration-500 ${seeMore && "rotate-180"}`}
           >
@@ -70,10 +69,9 @@ const OurWork = ({ projects }: ChildProps) => {
           </div>
         </button>
       </div>
-
-      <button className="w-[200px] h-11 cursor-pointer text-white text-[14px] font-medium tracking-[-4%] bg-complementary rounded-[12px]">
+      {/* <button className="w-[200px] h-11 cursor-pointer text-white text-[16px] font-medium tracking-[-4%] bg-complementary rounded-[12px]">
         Hire Us
-      </button>
+      </button> */}
     </section>
   );
 };

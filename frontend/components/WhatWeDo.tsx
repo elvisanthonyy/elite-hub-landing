@@ -1,25 +1,45 @@
-import Image from "next/image";
+import WhatWeDoCard from "./WhatWeDoCard";
+
+const whatWeDoCards = [
+  {
+    title: "digital solutions",
+    description:
+      "We build simple, fast, and scalable digital products that solve real-world problems.",
+    color: "#7D99B5",
+    iconColor: "#F9F9F9",
+    textColor: "#EFEFEF",
+    iconUrl: "/icons/digital-solutions.svg",
+  },
+  {
+    title: "learning & development",
+    description:
+      "We build simple, fast, and scalable digital products that solve real-world problems.",
+    color: "#F9F9F9",
+    iconColor: "#669985",
+    textColor: "#373737",
+    iconUrl: "/icons/learning-development.svg",
+  },
+  {
+    title: "growth & opportunities",
+    description:
+      "We build simple, fast, and scalable digital products that solve real-world problems.",
+    color: "#669985",
+    iconColor: "#F9F9F9",
+    textColor: "#EFEFEF",
+    iconUrl: "/icons/growth-opportunities.svg",
+  },
+];
 
 const WhatWeDo = () => {
   return (
-    <section className="px-4 flex flex-col gap-5 py-[48px] pb-[24px]">
+    <section className="px-4 flex flex-col gap-5 py-[16px]">
       <h1 className="text-[20px] tracking-[-4%] font-semibold">
         WHAT DO WE DO?
       </h1>
-      <p className="text-[14px] w-[90%] text-body-text leading-[18.2px]">
-        We build simple, fast, and scalable digital products that solve
-        real-world problems, while creating practical opportunities for people
-        to learn, build, and grow in the digital industry.
-      </p>
-      <div className="w-full">
-        <Image
-          src={"/images/what-we-do-image.png"}
-          alt="what we do"
-          width={1000}
-          height={1000}
-          draggable={false}
-          className="w-full"
-        />
+      <div className="w-full md:flex-row flex flex-col gap-3">
+        {whatWeDoCards.map((card, index) => (
+          <WhatWeDoCard index={index} card={card} key={index} />
+        ))}
       </div>
     </section>
   );

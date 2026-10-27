@@ -11,7 +11,7 @@ const Nav = () => {
       {/* Button to toggle theme*/}
       <button
         onClick={() => (mode === "light" ? setMode("dark") : setMode("light"))}
-        className={`h-[34px] transition-all duration-500 ease-in cursor-pointer flex gap-2 pr-[24px] items-center p-1 text-[14px] ${mode === "light" ? "bg-accent" : "bg-text"} font-medium rounded-[32px]`}
+        className={`h-[34px] transition-all duration-500 ease-in cursor-pointer flex gap-2 pr-[24px] items-center p-1 text-[14px] ${mode === "light" ? "bg-text" : "bg-text"} font-medium rounded-[32px]`}
       >
         <div
           className={`${mode === "light" ? "flex-1 bg-text" : "flex-2 bg-accent"} h-[26px] flex items-center justify-center aspect-square rounded-full`}
@@ -24,7 +24,7 @@ const Nav = () => {
         </div>
 
         <p
-          className={`${mode === "light" ? "flex-2 text-text" : "flex-1 text-white"}`}
+          className={`${mode === "light" ? "flex-2 text-white" : "flex-1 text-white"}`}
         >
           {mode}
         </p>

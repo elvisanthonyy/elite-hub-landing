@@ -8,6 +8,9 @@ import { getSocialLinks, getProjects } from "@/libs/api-requests";
 import { SocialLink } from "@/components/Footer";
 import { Project } from "@/components/OurWork";
 import Show from "@/components/Show";
+import AboutUs from "@/components/AboutUs";
+import GetStarted from "@/components/GetStarted";
+import WhyUs from "@/components/WhyUs";
 
 export default async function Home() {
   const socialLinks: SocialLink[] = await getSocialLinks();
@@ -19,6 +22,9 @@ export default async function Home() {
       <Nav />
       <Hero />
       <Show>
+        <AboutUs />
+      </Show>
+      <Show>
         <WhatWeDo />
       </Show>
       <Show>
@@ -26,6 +32,12 @@ export default async function Home() {
       </Show>
       <Show>
         <JoinAsIntern />
+      </Show>
+      <Show>
+        <WhyUs />
+      </Show>
+      <Show>
+        <GetStarted />
       </Show>
       <Footer socialLinks={socialLinks} />
     </div>
