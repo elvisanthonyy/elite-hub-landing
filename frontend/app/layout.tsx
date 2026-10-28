@@ -24,6 +24,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${roboto.variable} ${caacupeOne.variable} h-full antialiased bg-background text-foreground dark:bg-background dark:text-foreground transition-colors duration-500 ease-in-out`}
     >
       <body className="min-h-full flex flex-col">

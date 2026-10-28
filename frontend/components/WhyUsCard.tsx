@@ -15,7 +15,7 @@ interface ChildProps {
 }
 const WhyUsCard = ({ card, index }: ChildProps) => {
   console.log(`${index} ${card.title}`);
-  const cardTop = 32 * (index + 1);
+  const cardTop = 32 * (index + 1) + 64;
   return (
     <div
       style={{ top: cardTop }}

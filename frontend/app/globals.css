@@ -2,17 +2,15 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: light;
-    --background: #ffffff;
-    --foreground: #373737;
-    --primary: #496d5f;
-    --complementary: #4f6d8a;
-    --accent: #f2f4d6;
-    --text: #373737;
-    --body-text: #626262;
-  }
+:root {
+  color-scheme: light;
+  --background: #ffffff;
+  --foreground: #373737;
+  --primary: #050706;
+  --complementary: #4f6d8a;
+  --accent: #f2f4d6;
+  --text: #373737;
+  --body-text: #626262;
 }
 
 .dark {
