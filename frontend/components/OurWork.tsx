@@ -69,9 +69,6 @@ const OurWork = ({ projects }: ChildProps) => {
           </div>
         </button>
       </div>
-      {/* <button className="w-[200px] h-11 cursor-pointer text-white text-[16px] font-medium tracking-[-4%] bg-complementary rounded-[12px]">
-        Hire Us
-      </button> */}
     </section>
   );
 };

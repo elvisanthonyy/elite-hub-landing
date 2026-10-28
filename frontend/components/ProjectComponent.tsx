@@ -9,7 +9,7 @@ interface ChildProps {
 
 const ProjectComponent = ({ project }: ChildProps) => {
   return (
-    <div className="w-full flex flex-col gap-3 p-2 border rounded-[16px] min-h-[100px] border-[#d8d8d8]">
+    <div className="w-full bg-white flex flex-col gap-3 p-2 border rounded-[16px] min-h-[100px] dark:text-[#373737] border-[#d8d8d8]">
       <div className="w-full overflow-hidden h-[180px] bg-[#eefdf7] rounded-[8px]">
         <Image
           src={"/images/hero-image.png"}
@@ -21,7 +21,7 @@ const ProjectComponent = ({ project }: ChildProps) => {
       </div>
       <div className="px-2 flex flex-col gap-2">
         <h3>{project.name}</h3>
-        <p className="text-[14px] pt-2 border-t border-[#d8d8d8] leading-[18.2px] text-body-text">
+        <p className="text-[14px] pt-2 border-t border-[#d8d8d8] leading-[18.2px] text-body-text dark:text-[#373737]">
           {project.description}
         </p>
       </div>

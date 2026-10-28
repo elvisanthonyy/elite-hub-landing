@@ -18,8 +18,8 @@ const WhyUsCard = ({ card, index }: ChildProps) => {
   const cardTop = 32 * (index + 1);
   return (
     <div
-      style={{ backgroundColor: card?.color, top: cardTop }}
-      className={`w-full border-2 border-white flex md:top-0 md:static gap-5 p-3 sticky items-center justify-center rounded-[32px] h-[207px]`}
+      style={{ top: cardTop }}
+      className={`w-full bg-[#EDEDED] dark:bg-[#414141] dark:border-background border-2 border-white flex md:top-0 md:static gap-5 p-3 sticky items-center justify-center rounded-[32px] h-[207px]`}
     >
       <div
         className="w-[45px] flex aspect-square rounded-full"
@@ -35,10 +35,7 @@ const WhyUsCard = ({ card, index }: ChildProps) => {
       </div>
 
       <div className="flex flex-col gap-2">
-        <h2
-          style={{ color: card?.textColor }}
-          className="text-[18px] tracking-[-4%] font-semibold"
-        >
+        <h2 className="text-[18px] text-foreground tracking-[-4%] font-semibold">
           {card.title}
         </h2>
       </div>

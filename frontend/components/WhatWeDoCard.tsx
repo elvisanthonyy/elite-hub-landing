@@ -21,7 +21,7 @@ const WhatWeDoCard = ({ card, index }: ChildProps) => {
   return (
     <div
       style={{ backgroundColor: card?.color, top: cardTop }}
-      className={`w-full flex flex-col md:top-0 md:static gap-[32px] ${card.title === "learning & development" ? "border border-[#d8d8d8]" : ""} p-3 sticky rounded-[32px] h-[207px]`}
+      className={`w-full flex flex-col md:top-0 md:static gap-[32px] ${card.title === "learning & development" ? "border border-[#d8d8d8]" : ""} border-background border-2 p-3 sticky rounded-[32px] h-[207px]`}
     >
       <div
         className="w-[45px] flex aspect-square rounded-full"

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
-import { Freckle_Face } from "next/font/google";
+import ThemeProvider from "@/context/Theme-Provider";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -24,9 +24,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${roboto.variable} ${caacupeOne.variable} h-full antialiased`}
+      className={`${roboto.variable} ${caacupeOne.variable} h-full antialiased bg-background text-foreground dark:bg-background dark:text-foreground transition-colors duration-500 ease-in-out`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

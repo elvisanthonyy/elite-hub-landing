@@ -1,34 +1,17 @@
 "use client";
 import Icon from "./Icon";
-import { useState } from "react";
+import ThemeButton from "./ThemeButton";
 
 const Nav = () => {
-  const [mode, setMode] = useState("light");
   return (
-    <nav className="bg-white border-b border-[#d8d8d8] flex items-center justify-between px-4 h-[64px] w-full">
-      <Icon iconUrl="/icons/light-logo.svg" size={24} label="light icon" />
+    <nav className="bg-white fixed top-0 z-50 dark:bg-[#1a1a1a] border-b border-[#d8d8d8] flex items-center justify-between px-4 h-[64px] w-full">
+      <div className="flex items-center gap-3">
+        <Icon iconUrl="/icons/light-logo.svg" size={20} label="light icon" />
+        <h1 className="text-[18px] tracking-[-4%]">Elite hub</h1>
+      </div>
 
       {/* Button to toggle theme*/}
-      <button
-        onClick={() => (mode === "light" ? setMode("dark") : setMode("light"))}
-        className={`h-[34px] transition-all duration-500 ease-in cursor-pointer flex gap-2 pr-[24px] items-center p-1 text-[14px] ${mode === "light" ? "bg-text" : "bg-text"} font-medium rounded-[32px]`}
-      >
-        <div
-          className={`${mode === "light" ? "flex-1 bg-text" : "flex-2 bg-accent"} h-[26px] flex items-center justify-center aspect-square rounded-full`}
-        >
-          <Icon
-            iconUrl="/icons/light-mode-icon.svg"
-            size={16}
-            label="light icon"
-          />
-        </div>
-
-        <p
-          className={`${mode === "light" ? "flex-2 text-white" : "flex-1 text-white"}`}
-        >
-          {mode}
-        </p>
-      </button>
+      <ThemeButton />
     </nav>
   );
 };
