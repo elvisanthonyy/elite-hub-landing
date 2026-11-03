@@ -2,7 +2,7 @@ import React from "react";
 
 const GetStarted = () => {
   return (
-    <section className="px-4 flex flex-col gap-5 py-[16px]">
+    <section className="px-4 flex flex-col gap-5 py-[32px]">
       <h1 className="text-[20px] tracking-[-4%] font-semibold">
         Ready to Build Something Meaningful?
       </h1>
