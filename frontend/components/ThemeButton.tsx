@@ -18,7 +18,7 @@ export default function ThemeToggle() {
       <button
         type="button"
         aria-label="Change color theme"
-        className="rounded-lg border p-2"
+        className="h-[34px] transition-all duration-500 ease-in cursor-pointer flex text-white bg-text gap-2 items-center p-1 text-[14px] font-medium rounded-[32px]"
       >
         Theme
       </button>
@@ -35,10 +35,10 @@ export default function ThemeToggle() {
       className={`h-[34px] transition-all duration-500 ease-in cursor-pointer flex bg-text gap-2 pr-[24px] items-center p-1 text-[14px] font-medium rounded-[32px]`}
     >
       <div
-        className={`h-[26px] flex items-center justify-center aspect-square rounded-full`}
+        className={`h-[26px] flex bg-[#ffff] dark:bg-[#373737] items-center justify-center aspect-square rounded-full`}
       >
         <Icon
-          iconUrl="/icons/light-mode-icon.svg"
+          iconUrl={isDark ? "/icons/light-icon.svg" : "/icons/dark-icon.svg"}
           size={16}
           label="light icon"
         />
