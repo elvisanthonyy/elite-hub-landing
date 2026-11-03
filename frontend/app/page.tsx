@@ -18,12 +18,12 @@ export default async function Home() {
   console.log("Social Links:", socialLinks);
 
   return (
-    <div className="flex flex-col flex-1">
+    <div className="flex pt-16 flex-col flex-1">
       <Nav />
       <Hero />
-      <Show>
+      
         <AboutUs />
-      </Show>
+   
       <Show>
         <WhatWeDo />
       </Show>
