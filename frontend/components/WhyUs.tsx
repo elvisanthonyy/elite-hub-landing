@@ -37,7 +37,7 @@ const WhyUs = () => {
       <h1 className="text-[20px] tracking-[-4%] font-semibold">
         WHAT ELITE HUB?
       </h1>
-      <div className="w-full md:flex-row flex flex-col gap-2">
+      <div className="w-full md:flex-row flex flex-col gap-3">
         {whyUsCards.map((card, index) => (
           <WhyUsCard index={index} card={card} key={index} />
         ))}
