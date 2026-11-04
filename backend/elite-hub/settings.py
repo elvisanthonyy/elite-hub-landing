@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'elite-hub.wsgi.application'
 import os
 load_dotenv(BASE_DIR / ".env")
 
-if os.getenv("RENDER"):
+if os.getenv("RENDER").lower() == "true":
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.postgresql",

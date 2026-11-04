@@ -33,7 +33,7 @@ const whyUsCards = [
 
 const WhyUs = () => {
   return (
-    <section className="px-4 flex flex-col gap-5 py-[16px]">
+    <section className="px-4 lg:px-[120px] border-t border-[#d8d8d8] dark:border-[#414141] flex flex-col gap-5 py-[16px]">
       <h1 className="text-[20px] tracking-[-4%] font-semibold">
         WHAT ELITE HUB?
       </h1>

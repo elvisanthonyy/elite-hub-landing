@@ -11,7 +11,9 @@ class SocialLink(models.Model):
 
 class Project(models.Model):
     name = models.CharField(max_length=255)
-    description = models.CharField(max_length=255)
+    projectCategory = models.CharField(max_length=255, blank=True, null=True)
+    description = models.CharField()
+    imageUrl = models.CharField(max_length=255, blank=True, null=True)
     code = models.CharField(max_length=255)
     link = models.CharField(max_length=255)
     

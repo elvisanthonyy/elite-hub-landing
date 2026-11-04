@@ -8,7 +8,9 @@ import Icon from "./Icon";
 export interface Project {
   id: number;
   name: string;
+  projectCategory: string;
   description: string;
+  imageUrl: string;
   code: string;
   link: string;
 }
@@ -33,13 +35,16 @@ const OurWork = ({ projects }: ChildProps) => {
 
   useEffect(() => {
     if (!seeMore) {
+      if(window.innerWidth > 1024) return setMainProjects(projects)
       setMainProjects(projects.slice(0, 1));
     } else {
       setMainProjects(projects);
     }
   }, [seeMore]);
+
+
   return (
-    <section className="px-4 flex  flex-col gap-5 py-[16px]">
+    <section className="px-4 lg:px-[120px] flex  flex-col gap-5 py-[16px]">
       <div className="flex  flex-col">
         <h1 className="text-[20px] tracking-[-4%] font-semibold">OUR WORK</h1>
         <p className="text-[14px] w-[90%] text-body-text leading-[18.2px]">
@@ -48,12 +53,12 @@ const OurWork = ({ projects }: ChildProps) => {
         </p>
       </div>
 
-      <div className="w-full flex flex-col gap-3">
+      <div className="w-full flex flex-col md:flex-row gap-3">
         {mainProjects?.map((project) => (
           <ProjectComponent key={project.id.toString()} project={project} />
         ))}
       </div>
-      <div className="w-full flex justify-center">
+      <div className="w-full flex lg:hidden justify-center">
         <button
           className="text-[14px] cursor-pointer items-center flex gap-2 tracking-[-4%] font-medium text-body-text"
           onClick={setSeeMoreVariable}

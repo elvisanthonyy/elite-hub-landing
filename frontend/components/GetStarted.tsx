@@ -2,11 +2,11 @@ import React from "react";
 
 const GetStarted = () => {
   return (
-    <section className="px-4 flex flex-col gap-5 py-[32px]">
+    <section className="px-4 lg:px-[120px] flex flex-col gap-5 py-[32px]">
       <h1 className="text-[20px] tracking-[-4%] font-semibold">
         Ready to Build Something Meaningful?
       </h1>
-      <p className="text-[14px] w-[90%] text-body-text leading-[18.2px]">
+      <p className="text-[14px] w-[90%] lg:w-[40%] text-body-text leading-[18.2px]">
         Technology creates possibilities. Let's turn those possibilities into
         real impact. Whether you're looking for practical digital solutions or
         opportunities to learn, build, and grow, Elite Hub is here to help you
