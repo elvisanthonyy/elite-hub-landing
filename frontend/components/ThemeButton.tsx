@@ -18,7 +18,7 @@ export default function ThemeToggle() {
       <button
         type="button"
         aria-label="Change color theme"
-        className="h-[34px] transition-all duration-500 ease-in cursor-pointer flex text-white bg-text gap-2 items-center p-1 text-[14px] font-medium rounded-[32px]"
+        className="h-[34px] transition-all duration-500 ease-in cursor-pointer z-100 flex text-white bg-text gap-2 items-center p-1 text-[14px] font-medium rounded-[32px]"
       >
         Theme
       </button>
@@ -32,7 +32,7 @@ export default function ThemeToggle() {
       type="button"
       onClick={() => setTheme(isDark ? "light" : "dark")}
       aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
-      className={`h-[34px] transition-all duration-500 ease-in cursor-pointer flex bg-text gap-2 pr-[24px] items-center p-1 text-[14px] font-medium rounded-[32px]`}
+      className={`h-[34px] transition-all duration-500 ease-in cursor-pointer z-100 flex bg-text gap-2 pr-[24px] items-center p-1 text-[14px] font-medium rounded-[32px]`}
     >
       <div
         className={`h-[26px] flex bg-[#ffff] dark:bg-[#373737] items-center justify-center aspect-square rounded-full`}
